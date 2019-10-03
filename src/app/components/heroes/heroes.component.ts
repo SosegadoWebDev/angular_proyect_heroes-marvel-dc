@@ -18,8 +18,8 @@ export class HeroesComponent implements OnInit {
   }
   //navegación con rutas usando button
   
-  // verHeroe(idx:number) { 
-  //   // console.log(id)
-  //   this.router.navigate(['/heroe', idx])
-  // }
+  verHeroe(idx:number) { 
+    // console.log(id)
+    this.router.navigate(['/heroe', idx])
+  }
 }

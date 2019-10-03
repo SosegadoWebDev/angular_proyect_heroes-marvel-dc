@@ -10,6 +10,7 @@ export class HeroesService {
             aparicion: "1941-11-01",
             casa: "DC",
             casaUrl: "../../assets/images/recursos/dc.jpg",
+            id: 0
         },
         {
             nombre: "Batman",
@@ -17,7 +18,8 @@ export class HeroesService {
             img: "../../../assets/images/recursos/batman.png",
             aparicion: "1939-05-01",
             casa: "DC",
-            casaUrl: "../../assets/images/recursos/dc.jpg"
+            casaUrl: "../../assets/images/recursos/dc.jpg",
+            id: 1
         },
         {
             nombre: "Daredevil",
@@ -25,7 +27,8 @@ export class HeroesService {
             img: "../../../assets/images/recursos/daredevil.png",
             aparicion: "1964-01-01",
             casa: "Marvel",
-            casaUrl: "../../assets/images/recursos/marvel.jpg"
+            casaUrl: "../../assets/images/recursos/marvel.jpg",
+            id: 2
         },
         {
             nombre: "Hulk",
@@ -33,7 +36,8 @@ export class HeroesService {
             img: "../../../assets/images/recursos/hulk.png",
             aparicion: "1962-05-01",
             casa: "Marvel",
-            casaUrl: "../../assets/images/recursos/marvel.jpg"
+            casaUrl: "../../assets/images/recursos/marvel.jpg",
+            id: 3
         },
         {
             nombre: "Linterna Verde",
@@ -41,7 +45,8 @@ export class HeroesService {
             img: "../../../assets/images/recursos/linterna-verde.png",
             aparicion: "1940-06-01",
             casa: "DC",
-            casaUrl: "../../assets/images/recursos/dc.jpg"
+            casaUrl: "../../assets/images/recursos/dc.jpg",
+            id: 4
         },
         {
             nombre: "Spider-Man",
@@ -49,7 +54,8 @@ export class HeroesService {
             img: "../../../assets/images/recursos/spiderman.png",
             aparicion: "1962-08-01",
             casa: "Marvel",
-            casaUrl: "../../assets/images/recursos/marvel.jpg"
+            casaUrl: "../../assets/images/recursos/marvel.jpg",
+            id: 5
         },
         {
             nombre: "Wolverine",
@@ -57,7 +63,8 @@ export class HeroesService {
             img: "../../../assets/images/recursos/wolverine.png",
             aparicion: "1974-11-01",
             casa: "Marvel",
-            casaUrl: "../../assets/images/recursos/marvel.jpg"
+            casaUrl: "../../assets/images/recursos/marvel.jpg",
+            id: 6
         }
     ];
 
@@ -67,8 +74,19 @@ export class HeroesService {
     getHeroes() {
         return this.heroes
     }
-    getHeroe(id:string) {
+    getHeroe(id: string) {
         return this.heroes[id]
+    }
+    buscarHeroes(termino: string) {
+        let heroesArr: Heroe[] = []
+        termino = termino.toLowerCase()
+        for (let heroe of this.heroes) {
+            let nombre = heroe.nombre.toLowerCase()
+            if (nombre.indexOf(termino) >= 0) {
+                heroesArr.push(heroe)
+            }
+        }
+        return heroesArr
     }
 }
 //modelo de arreglo
@@ -79,4 +97,5 @@ export interface Heroe {
     aparicion: string
     casa: string
     casaUrl: string
+    id?: number
 }

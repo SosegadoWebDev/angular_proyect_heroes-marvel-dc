@@ -9,20 +9,27 @@ import { Router } from '@angular/router'
 })
 export class NavbarComponent implements OnInit {
   heroes: Heroe[] = []
-  heroeId: number
+  heroe: any
+  heroeId:number
   constructor(private _heroesService: HeroesService, private router: Router) {
   }
   ngOnInit() {
   }
 
-  buscarHeroe(heroe: string) {
-    heroe = heroe.toLowerCase()
-    this.heroes = this._heroesService.getHeroes()
-    // console.log(this.heroes)
-    this.heroes.filter((e, index) => {
-      if (e.nombre.toLowerCase() === heroe) {
-        this.router.navigate(['/heroe', index])
-      }
-    })
+  // buscarHeroe(nombreHeroe: string) {
+  //   nombreHeroe = nombreHeroe.toLowerCase()
+  //   this.heroes = this._heroesService.getHeroes()
+    
+  //   this.heroe = this.heroes.find((heroe, index) => {
+  //     this.heroeId = index
+  //     return nombreHeroe === heroe.nombre.toLowerCase()
+  //   })
+  //   if(this.heroe) {
+  //     this.router.navigate(['/heroe', this.heroeId])
+  //   }
+  // }
+
+  buscarHeroe(termino:string) {
+    this.router.navigate(['/buscador', termino])
   }
 }
