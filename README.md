@@ -1,3 +1,6 @@
+![](https://github.com/SosegadoWebDev/Firebase-CRUD-heroes-marvel_ANGULAR/blob/master/src/assets/images/recursos/localhost_4500_heroes.png)
+![](https://github.com/SosegadoWebDev/Firebase-CRUD-heroes-marvel_ANGULAR/blob/master/src/assets/images/recursos/localhost_4500_heroes%20(1).png)
+
 # SinglePageApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
@@ -26,5 +29,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-![](https://github.com/SosegadoWebDev/Firebase-CRUD-heroes-marvel_ANGULAR/blob/master/src/assets/images/recursos/localhost_4500_heroes.png)
-![](https://github.com/SosegadoWebDev/Firebase-CRUD-heroes-marvel_ANGULAR/blob/master/src/assets/images/recursos/localhost_4500_heroes%20(1).png)
